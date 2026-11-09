@@ -1,0 +1,131 @@
+TEXT EXTRACTION OF USER-PROVIDED 3-PAGE PDF; some mathematical notation may be distorted.
+Source: Práctica (1)(1).pdf
+Note: this RNN practice is a separate course exercise, NOT the Deep Learning Project Deliverable 1 rubric.
+
+<PARSED TEXT FOR PAGE: 1 / 3>
+                  Ejercicio: Red Neuronal Recurrente (RNN)
+                          Propagación hacia adelante y clasificación
+
+
+Ejercicio: Red Neuronal Recurrente (RNN)
+   Considere la secuencia de palabras “Very good”, representada mediante los siguientes embed-
+dings:
+                                                    
+                                        0,2            0,5
+                                  x1 = 0,1 ,
+                                              x2 = 0,4 .
+                                                     
+                                        0,3            0,2
+   La red tiene tres neuronas ocultas y dos clases de salida (negativa y positiva). Se consideran las
+matrices de pesos:
+                                                                          
+                           0,2 −0,1 0,3                     0,3 −0,2 0,1
+                    U =  0,1    0,4 −0,2 ,        W =  0,2      0,4 −0,1 ,
+                          −0,2 0,3      0,1                −0,1 0,2      0,3
+                                                         
+                                               0,2 −0,1
+                                       V = −0,3 0,4  .
+                                               0,1   0,2
+   Los sesgos y el estado inicial son:
+                                                                     
+                                     0,1           [ ]                 0
+                                                    0
+                               b = 0,1 ,
+                                               c=     ,          h0 = 0 .
+                                                                      
+                                                    0
+                                     0,1                               0
+Calcule:
+
+  1. Las dimensiones de las matrices U , W y V .
+
+  2. La contribución de la primera entrada:
+                                                        U x1 .
+
+  3. El primer estado oculto:
+                                       h1 = tanh(U x1 + W h0 + b).
+
+  4. Las contribuciones de la segunda entrada:
+
+                                               U x2 ,        W h1 .
+
+  5. El segundo estado oculto:
+                                       h2 = tanh(U x2 + W h1 + b).
+
+  6. Las puntuaciones de salida:
+                                               z = V ⊤ h2 + c.
+
+
+
+
+                                                    1
+<PARSED TEXT FOR PAGE: 2 / 3>
+  7. Las probabilidades de clasificación:
+
+                                                 y
+                                                 b = Softmax(z),
+
+     donde
+                                                              e zi
+                                             Softmax(zi ) = ∑2     zj
+                                                                      .
+                                                             j=1 e
+
+  8. La clase predicha por la red.
+
+Nota: Realice los cálculos matriciales y redondee los resultados a cuatro decimales.
+
+
+Actividad práctica: Entrenamiento de una RNN mediante BPTT
+   A partir del código de Python proporcionado en clase, analice el funcionamiento y entrenamiento
+de una red neuronal recurrente (RNN) para la clasificación de secuencias de texto.
+
+Actividades
+  1. Propagación hacia adelante.
+     Ejecute el código para la secuencia [Ï", "love"] y registre los estados ocultos h1 y h2 , los
+     logits y las probabilidades obtenidas mediante Softmax.
+     Interprete la clasificación obtenida y compárela con la clase verdadera.
+
+  2. Gradientes y actualización de pesos.
+                                            ∂J   ∂J   ∂J
+     Identifique las matrices de gradientes ∂U , ∂W y ∂V .
+     Explique qué representan estos gradientes y cómo intervienen en la actualización de los pesos de
+     la red.
+
+  3. Entrenamiento de la RNN.
+     Ejecute el entrenamiento utilizando las dos secuencias definidas en el código, con una tasa de
+     aprendizaje η = 0,1 y 10 iteraciones.
+     Registre la pérdida total y represente gráficamente su evolución.
+     Interprete el comportamiento observado.
+
+  4. Comparación de tasas de aprendizaje.
+     Modifique el código para repetir el entrenamiento utilizando:
+
+                                         η ∈ {0,01, 0,05, 0,1, 0,5}.
+
+     Reinicie los pesos originales para cada experimento y mantenga 10 iteraciones.
+     Represente las cuatro curvas de pérdida en una misma gráfica y compare los resultados obtenidos.
+
+  5. Análisis e interpretación.
+     Responda de manera argumentada:
+
+       a) ¿La función de pérdida disminuye durante el entrenamiento? Explique.
+       b) ¿Qué efecto tiene la tasa de aprendizaje sobre la reducción de la pérdida?
+
+                                                      2
+<PARSED TEXT FOR PAGE: 3 / 3>
+       c) ¿Cuál de las tasas evaluadas presenta el mejor comportamiento y por qué?
+       d ) ¿Qué diferencias observa entre los pesos iniciales y los pesos finales?
+       e) ¿Qué función cumple BPTT durante el entrenamiento de la RNN?
+       f ) ¿Una disminución de la pérdida garantiza que la red clasificará correctamente nuevas se-
+           cuencias? Justifique.
+
+Entrega: Notebook con el código ejecutado, las gráficas comparativas y las interpretaciones corres-
+pondientes.
+Nota: La pérdida debe calcularse bajo las mismas condiciones en todos los experimentos. Los pesos
+deben reiniciarse antes de evaluar cada tasa de aprendizaje.
+
+
+
+
+                                                    3
