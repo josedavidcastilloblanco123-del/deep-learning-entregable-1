@@ -6,6 +6,7 @@
 Academic project: **state of the art, exploratory data analysis (EDA), and rigorous benchmarking of three *simple* Deep Learning baselines**.
 
 ## Start here
+- [**CODEX_LEER_CONVERSACION_COMPLETA.md**](CODEX_LEER_CONVERSACION_COMPLETA.md) — **priority instruction to open the shared chat in a browser and extract the literal conversation** (pending execution in Codex).
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) — shared project decisions and rubric checklist for Codex.
 - [AGENTS.md](AGENTS.md) — Codex instructions.
 - [Full-text extraction of assignment (34 pages)](docs/Entregable1DeepLearningProject_extracted.txt) — official Deliverable 1 rubric, extracted from the PDF.
