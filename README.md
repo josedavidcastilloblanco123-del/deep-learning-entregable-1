@@ -1,5 +1,8 @@
 # Deep Learning — Entregable 1
 
+> **Actualización (10 nov 2026):** el repositorio principal de experimentos es [BESADAJ/wdsd-segmentacion-tornillos-entregable-1](https://github.com/BESADAJ/wdsd-segmentacion-tornillos-entregable-1). Este repositorio contiene el contexto y la rúbrica. [Leer el historial recuperable de nuestra conversación para Codex](CHATGPT_HISTORIAL_DISPONIBLE.md) (**parcial**, no transcripción íntegra). La integración de GitHub no permitió escribir en BESADAJ (403), por lo que se dejó aquí.
+
+
 Academic project: **state of the art, exploratory data analysis (EDA), and rigorous benchmarking of three *simple* Deep Learning baselines**.
 
 ## Start here
