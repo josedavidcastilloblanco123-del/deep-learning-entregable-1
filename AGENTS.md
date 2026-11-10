@@ -1,5 +1,10 @@
 # Instructions for Codex
 
+## Priority user request: recover the original ChatGPT conversation
+
+**Before assuming the dialogue context is complete**, read [CODEX_LEER_CONVERSACION_COMPLETA.md](CODEX_LEER_CONVERSACION_COMPLETA.md). Follow its instruction to open the shared chat URL in an available browser, extract the literal messages, verify completeness, and respect privacy before publishing. The existing `CHATGPT_HISTORIAL_DISPONIBLE.md` is *partial*, not the full transcript. If your environment has no browser, report that limitation rather than inventing the conversation.
+
+
 This repository is for an academic Deep Learning assignment. Read `PROJECT_CONTEXT.md` and `docs/Entregable1DeepLearningProject_extracted.txt` before altering code or proposing experimental methods.
 
 - The **34-page project specification** is authoritative. The 3-page RNN document is a different assignment.
